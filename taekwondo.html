@@ -366,48 +366,56 @@ Embrace continuous growth and self-improvement.
                     <!-- Form Section -->
                     <div class="col-md-7">
                         <h2 class="fw-bold mb-4">Enroll for Taekwondo  Today</h2>
-                        <form>
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="First Name" />
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name" />
-                                </div>
+                        <form id="booking-form">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" name="firstName" placeholder="First Name" required />
                             </div>
-    
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email" />
+                            <div class="col">
+                                <input type="text" class="form-control" name="lastName" placeholder="Last name" required />
                             </div>
-    
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="ZIP Code" />
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Phone Number" />
-                                </div>
+                        </div>
+                
+                        <div class="mb-3">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required />
+                        </div>
+                
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" name="zipCode" placeholder="ZIP Code" required />
                             </div>
-    
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="When you want to start?" />
+                            <div class="col">
+                                <input type="tel" class="form-control" name="phoneNumber" placeholder="Phone Number" required />
                             </div>
-    
-                            <div class="row mb-3">
-                                <div class="col">
-                                    <input type="date" class="form-control" placeholder="Date" />
-                                </div>
-                                <div class="col">
-                                    <input type="time" class="form-control" placeholder="Time" />
-                                </div>
+                        </div>
+                
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="startPreference" placeholder="When you want to start?" required />
+                        </div>
+                
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="date" class="form-control" name="visitDate" placeholder="Date" required />
                             </div>
-    
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="Tell Us About Your Kid"></textarea>
+                            <div class="col">
+                                <input type="time" class="form-control" name="visitTime" placeholder="Time" required />
                             </div>
-    
-                            <button type="submit" class="btn btn-info text-white">Book A Visit</button>
-                        </form>
+                        </div>
+                
+                        <div class="mb-3">
+                            <textarea class="form-control" name="kidInfo" rows="4" placeholder="Tell Us About Your Kid" required></textarea>
+                        </div>
+                
+                        <button type="submit" class="btn btn-info text-white">Book A Visit</button>
+                    </form>
+                    
+                    <!-- Success and error messages -->
+                    <div id="success-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px;">
+                        Your booking request has been submitted successfully! We'll contact you soon to confirm your visit.
+                    </div>
+                    <div id="error-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px;">
+                        Something went wrong. Please try again later.
+                    </div>
                     </div>
     
                     <!-- Info Section -->

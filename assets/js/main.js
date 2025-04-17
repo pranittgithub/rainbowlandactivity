@@ -577,3 +577,90 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     // Send the request
     xhr.send(urlEncodedData);
   });
+
+
+
+  
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the booking form
+    const bookingForm = document.getElementById('booking-form');
+    
+    // Add submit event listener if the form exists
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', handleBookingSubmit);
+    }
+    
+    // Form submission handler
+    function handleBookingSubmit(e) {
+        e.preventDefault();
+        
+        // Hide any existing messages
+        document.getElementById('success-message').style.display = 'none';
+        document.getElementById('error-message').style.display = 'none';
+        
+        // Get form data
+        const form = e.target;
+        const formData = new FormData(form);
+        
+        // Validate form data
+        let isValid = true;
+        let missingFields = [];
+        
+        // Required fields
+        const requiredFields = [
+            'firstName', 'lastName', 'email', 'zipCode', 
+            'phoneNumber', 'startPreference', 'visitDate', 'visitTime'
+        ];
+        
+        requiredFields.forEach(field => {
+            if (!formData.get(field).trim()) {
+                isValid = false;
+                missingFields.push(field);
+            }
+        });
+        
+        if (!isValid) {
+            document.getElementById('error-message').textContent = 'Please fill in all required fields.';
+            document.getElementById('error-message').style.display = 'block';
+            return;
+        }
+        
+        // Disable submit button and show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'Submitting...';
+        submitBtn.disabled = true;
+        
+        // Create URL encoded data
+        const urlEncodedData = new URLSearchParams(formData).toString();
+        
+        // Send data to Google Script
+        // Replace with your actual deployed script URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx8GNPl06eiGVtnQK2QaD9kpnU0QGR3cFn7IhScXmCozoY_v-gRPJhNsd8HiOKAYkVkLw/exec';
+        
+        fetch(scriptURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: urlEncodedData,
+            mode: 'no-cors' // This prevents CORS errors but makes response unreadable
+        })
+        .then(() => {
+            // Since we're using no-cors, we can't read the response
+            // We'll assume success if the request didn't throw an error
+            form.reset();
+            document.getElementById('success-message').style.display = 'block';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('error-message').textContent = 'Something went wrong. Please try again later.';
+            document.getElementById('error-message').style.display = 'block';
+        })
+        .finally(() => {
+            // Re-enable the submit button
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+        });
+    }
+});

@@ -108,12 +108,13 @@
                         </div>
                         <div class="offcanvas__close">
                             <button>
-                            <i class="fas fa-times"></i>
+                                <i class="fas fa-times"></i>
                             </button>
                         </div>
                     </div>
                     <p class="text d-none d-xl-block">
-                        Nullam dignissim, ante scelerisque the  is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
+                        Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a
+                        feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
                     </p>
                     <div class="mobile-menu fix mb-3"></div>
                     <div class="offcanvas__contact">
@@ -132,7 +133,8 @@
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a href="mailto:info@example.com"><span class="mailto:info@example.com">info@example.com</span></a>
+                                    <a href="mailto:info@example.com"><span
+                                            class="mailto:info@example.com">info@example.com</span></a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
@@ -211,7 +213,8 @@
                     <div class="header-left">
                         <div class="logo">
                             <a href="index.html" class="header-logo">
-                                <img src="assets/img/logo/RainbowLand_Logo.png" style="height: 67px; width: 95px;" alt="logo-img">
+                                <img src="assets/img/logo/RainbowLand_Logo.png" style="height: 67px; width: 95px;"
+                                    alt="logo-img">
                             </a>
                         </div>
                     </div>
@@ -226,7 +229,7 @@
                                         <a href="about.html">About Us</a>
                                     </li>
                                     <li>
-                                        <a >
+                                        <a>
                                             Programs
                                         </a>
                                         <ul class="submenu">
@@ -235,7 +238,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a >
+                                        <a>
                                             Activities
                                         </a>
                                         <ul class="submenu">
@@ -259,9 +262,10 @@
                                 </ul>
                             </nav>
                         </div>
-                        
+
                         <div class="header-button  d-none d-xl-block">
-                            <a href="contact.html" class="theme-btn" style="padding: 16px 24px; font-size: 0.9em; transform: scale(0.9); margin-left: 1rem">
+                            <a href="contact.html" class="theme-btn"
+                                style="padding: 16px 24px; font-size: 0.9em; transform: scale(0.9); margin-left: 1rem">
                                 <span>Contact Us</span>
                             </a>
                         </div>
@@ -399,48 +403,56 @@
                 <!-- Form Section -->
                 <div class="col-md-7">
                     <h2 class="fw-bold mb-4">Book A visit Right Now</h2>
-                    <form>
+                    <form id="booking-form">
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="First Name" />
+                                <input type="text" class="form-control" name="firstName" placeholder="First Name" required />
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name" />
+                                <input type="text" class="form-control" name="lastName" placeholder="Last name" required />
                             </div>
                         </div>
-
+                
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email" />
+                            <input type="email" class="form-control" name="email" placeholder="Email" required />
                         </div>
-
+                
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="ZIP Code" />
+                                <input type="text" class="form-control" name="zipCode" placeholder="ZIP Code" required />
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Phone Number" />
+                                <input type="tel" class="form-control" name="phoneNumber" placeholder="Phone Number" required />
                             </div>
                         </div>
-
+                
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="When you want to start?" />
+                            <input type="text" class="form-control" name="startPreference" placeholder="When you want to start?" required />
                         </div>
-
+                
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="date" class="form-control" placeholder="Date" />
+                                <input type="date" class="form-control" name="visitDate" placeholder="Date" required />
                             </div>
                             <div class="col">
-                                <input type="time" class="form-control" placeholder="Time" />
+                                <input type="time" class="form-control" name="visitTime" placeholder="Time" required />
                             </div>
                         </div>
-
+                
                         <div class="mb-3">
-                            <textarea class="form-control" rows="4" placeholder="Tell Us About Your Kid"></textarea>
+                            <textarea class="form-control" name="kidInfo" rows="4" placeholder="Tell Us About Your Kid" required></textarea>
                         </div>
-
+                
                         <button type="submit" class="btn btn-info text-white">Book A Visit</button>
                     </form>
+                    
+                    <!-- Success and error messages -->
+                    <div id="success-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px;">
+                        Your booking request has been submitted successfully! We'll contact you soon to confirm your visit.
+                    </div>
+                    <div id="error-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px;">
+                        Something went wrong. Please try again later.
+                    </div>
                 </div>
 
                 <!-- Info Section -->
@@ -504,38 +516,40 @@
 
                 <!-- Right Column: Form -->
                 <div class="contact-content" style="width: 40%; margin-bottom: 1rem;">
-                                <form id="contact-form" style="width: 100%; max-width: 500px; margin: 0 auto;">
-                                    <div style="margin-bottom: 15px;">
-                                        <span>Your name*</span>
-                                        <input type="text" name="name" placeholder="Your Name" required
-                                            style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box;">
-                                    </div>
-                                    <div style="margin-bottom: 15px;">
-                                        <span>Your Email*</span>
-                                        <input type="email" name="email" placeholder="Your Email" required
-                                            style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box;">
-                                    </div>
-                                    <div style="margin-bottom: 15px;">
-                                        <span>Write Message*</span>
-                                        <textarea name="message" placeholder="Write Message" required
-                                            style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box; height: 100px; resize: none;"></textarea>
-                                    </div>
-                                    <button type="submit"
-                                        style="width: 100%; padding: 10px; background-color: #1abc9c; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
-                                        Send Message <i class="fa-solid fa-arrow-right-long"></i>
-                                    </button>
-                                </form>
-                                
-                                <!-- Success message container (hidden by default) -->
-                                <div id="success-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px; text-align: center;">
-                                    Message sent successfully! Thank you for contacting us.
-                                </div>
-                                
-                                <!-- Error message container (hidden by default) -->
-                                <div id="error-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px; text-align: center;">
-                                    Something went wrong. Please try again later.
-                                </div>
-                            </div>
+                    <form id="contact-form" style="width: 100%; max-width: 500px; margin: 0 auto;">
+                        <div style="margin-bottom: 15px;">
+                            <span>Your name*</span>
+                            <input type="text" name="name" placeholder="Your Name" required
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <span>Your Email*</span>
+                            <input type="email" name="email" placeholder="Your Email" required
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <span>Write Message*</span>
+                            <textarea name="message" placeholder="Write Message" required
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box; height: 100px; resize: none;"></textarea>
+                        </div>
+                        <button type="submit"
+                            style="width: 100%; padding: 10px; background-color: #1abc9c; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                            Send Message <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </form>
+
+                    <!-- Success message container (hidden by default) -->
+                    <div id="success-message"
+                        style="display: none; margin-top: 15px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px; text-align: center;">
+                        Message sent successfully! Thank you for contacting us.
+                    </div>
+
+                    <!-- Error message container (hidden by default) -->
+                    <div id="error-message"
+                        style="display: none; margin-top: 15px; padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px; text-align: center;">
+                        Something went wrong. Please try again later.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -632,7 +646,7 @@
                             </div>
                             <ul class="list-area">
                                 <li>
-                                    <a >
+                                    <a>
                                         <i class="fa-solid fa-chevron-right"></i>
                                         Our Services
                                     </a>
@@ -665,25 +679,25 @@
                             </div>
                             <ul class="list-area">
                                 <li>
-                                    <a >
+                                    <a>
                                         <i class="fa-solid fa-chevron-right"></i>
                                         Music Learning
                                     </a>
                                 </li>
                                 <li>
-                                    <a >
+                                    <a>
                                         <i class="fa-solid fa-chevron-right"></i>
                                         Sports, Games
                                     </a>
                                 </li>
                                 <li>
-                                    <a >
+                                    <a>
                                         <i class="fa-solid fa-chevron-right"></i>
                                         Science Class
                                     </a>
                                 </li>
                                 <li>
-                                    <a >
+                                    <a>
                                         <i class="fa-solid fa-chevron-right"></i>
                                         Drawing
                                     </a>
