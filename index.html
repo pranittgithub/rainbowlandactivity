@@ -175,23 +175,26 @@
                 <img src="assets/img/header-top-shape.png" alt="shape-img">
             </div>
             <div class="container-fluid">
-                <div class="header-top-wrapper">
-                    <ul class="contact-list">
-                        <li>
-                            <i class="fal fa-map-marker-alt"></i>
+                <div
+                    class="header-top-wrapper d-flex flex-wrap justify-content-between align-items-center py-2 px-3 text-center text-md-start">
+                    <ul class="contact-list d-flex flex-column flex-lg-row mb-2 mb-lg-0 small">
+                        <li class="me-lg-4 mb-1 mb-lg-0">
+                            <i class="fal fa-map-marker-alt me-2"></i>
                             3rd Floor, Dhimahi Community Centre, Virar West - 401303
                         </li>
                         <li>
-                            <i class="far fa-envelope"></i>
-                            <a href="mailto:admissions@rainbowlandactivity.com" class="link">admissions@rainbowlandactivity.com</a>
+                            <i class="far fa-envelope me-2"></i>
+                            <a href="mailto:admissions@rainbowlandactivity.com"
+                                class="link">admissions@rainbowlandactivity.com</a>
                         </li>
                     </ul>
-                    <div class="social-icon d-flex align-items-center">
-                        <span>Follow Us On:</span>
+                    <div
+                        class="social-icon d-flex justify-content-center justify-content-lg-start align-items-center gap-2 small">
+                        <span class="me-2">Follow Us On:</span>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -394,11 +397,6 @@
                                     </ul>
                                 </div>
                                 <div class="about-author">
-                                    <!-- <div class="about-button wow fadeInUp" data-wow-delay=".3s">
-                                        <a href="about.html" class="theme-btn">
-                                            Explore More <i class="fa-solid fa-arrow-right-long"></i>
-                                        </a>
-                                    </div> -->
                                     <div class="author-icon wow fadeInUp" data-wow-delay=".5s">
                                        <div class="icon">
                                             <i class="fa-solid fa-phone"></i>
@@ -1122,7 +1120,7 @@
 
         <div class="container" style="margin-top:2rem;">
             <div class="page-heading">
-                <div class="row">
+                <div class="row" style="gap: 5rem;">
                     <!-- Left Column: Logo + Info -->
                     <div class="col-12 col-md-6 text-center"
                         style="padding: 20px 0; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
@@ -1150,23 +1148,38 @@
                     </div>
     
                     <!-- Right Column: Form -->
-                    <div class="col-12 col-md-6" style="padding: 20px 0;">
-                        <form style="width: 90%; max-width: 500px; margin: 0 auto;">
+                    <div class="contact-content" style="width: 40%; margin-bottom: 1rem;">
+                        <form id="contact-form" style="width: 100%; max-width: 500px; margin: 0 auto;">
                             <div style="margin-bottom: 15px;">
-                                <input type="text" placeholder="Name"
-                                    style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+                                <span>Your name*</span>
+                                <input type="text" name="name" placeholder="Your Name" required
+                                    style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box;">
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <input type="email" placeholder="Email"
-                                    style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+                                <span>Your Email*</span>
+                                <input type="email" name="email" placeholder="Your Email" required
+                                    style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box;">
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <textarea placeholder="Message"
-                                    style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; height: 100px; resize: none;"></textarea>
+                                <span>Write Message*</span>
+                                <textarea name="message" placeholder="Write Message" required
+                                    style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box; height: 100px; resize: none;"></textarea>
                             </div>
                             <button type="submit"
-                                style="width: 100%; padding: 10px; background-color: #1abc9c; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+                                style="width: 100%; padding: 10px; background-color: #1abc9c; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                                Send Message <i class="fa-solid fa-arrow-right-long"></i>
+                            </button>
                         </form>
+                        
+                        <!-- Success message container (hidden by default) -->
+                        <div id="success-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px; text-align: center;">
+                            Message sent successfully! Thank you for contacting us.
+                        </div>
+                        
+                        <!-- Error message container (hidden by default) -->
+                        <div id="error-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px; text-align: center;">
+                            Something went wrong. Please try again later.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1205,7 +1218,7 @@
                     <div class="content">
                         <p>Make a Quote</p>
                         <h3>
-                            <a href="mailto:RainbowLand@gmail.com">RainbowLand@gmail.com</a>
+                            <a href="mailto:rainbowland@gmail.com">rainbowland@gmail.com</a>
                         </h3>
                     </div>
                 </div>

@@ -520,3 +520,60 @@ CSS TABLE OF CONTENTS
 
 })(jQuery); // End jQuery
 
+
+// Wait for DOM to be fully loaded
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    // Hide any existing messages
+    document.getElementById('success-message').style.display = 'none';
+    document.getElementById('error-message').style.display = 'none';
+    
+    // Show loading indicator or disable button
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Sending...';
+    submitBtn.disabled = true;
+    
+    // Collect form data into an object
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+    
+    // Use AJAX to send the form without redirecting
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwJ0pSEQwO_RO65ahOjPkxeirf69-Z31xocP4XBcb-Elefl_uccgb2EwrI4UXZJZDRb/exec';
+    
+    // Create XMLHttpRequest
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', scriptURL, true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    
+    // Handle response
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        // Reset button state
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        
+        if (xhr.status === 200) {
+          // Success
+          form.reset();
+          document.getElementById('success-message').style.display = 'block';
+        } else {
+          // Error
+          document.getElementById('error-message').style.display = 'block';
+        }
+      }
+    };
+    
+    // Prepare form data for URL encoding
+    const urlEncodedData = Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+    
+    // Send the request
+    xhr.send(urlEncodedData);
+  });

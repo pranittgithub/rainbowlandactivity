@@ -503,24 +503,39 @@
                 </div>
 
                 <!-- Right Column: Form -->
-                <div class="col-12 col-md-6" style="padding: 20px 0;">
-                    <form style="width: 90%; max-width: 500px; margin: 0 auto;">
-                        <div style="margin-bottom: 15px;">
-                            <input type="text" placeholder="Name"
-                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <input type="email" placeholder="Email"
-                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <textarea placeholder="Message"
-                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; height: 100px; resize: none;"></textarea>
-                        </div>
-                        <button type="submit"
-                            style="width: 100%; padding: 10px; background-color: #1abc9c; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Send</button>
-                    </form>
-                </div>
+                <div class="contact-content" style="width: 40%; margin-bottom: 1rem;">
+                                <form id="contact-form" style="width: 100%; max-width: 500px; margin: 0 auto;">
+                                    <div style="margin-bottom: 15px;">
+                                        <span>Your name*</span>
+                                        <input type="text" name="name" placeholder="Your Name" required
+                                            style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box;">
+                                    </div>
+                                    <div style="margin-bottom: 15px;">
+                                        <span>Your Email*</span>
+                                        <input type="email" name="email" placeholder="Your Email" required
+                                            style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box;">
+                                    </div>
+                                    <div style="margin-bottom: 15px;">
+                                        <span>Write Message*</span>
+                                        <textarea name="message" placeholder="Write Message" required
+                                            style="width: 100%; padding: 10px; border: 1px solid #ddd; color: black; border-radius: 5px; box-sizing: border-box; height: 100px; resize: none;"></textarea>
+                                    </div>
+                                    <button type="submit"
+                                        style="width: 100%; padding: 10px; background-color: #1abc9c; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                                        Send Message <i class="fa-solid fa-arrow-right-long"></i>
+                                    </button>
+                                </form>
+                                
+                                <!-- Success message container (hidden by default) -->
+                                <div id="success-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #d4edda; color: #155724; border-radius: 5px; text-align: center;">
+                                    Message sent successfully! Thank you for contacting us.
+                                </div>
+                                
+                                <!-- Error message container (hidden by default) -->
+                                <div id="error-message" style="display: none; margin-top: 15px; padding: 10px; background-color: #f8d7da; color: #721c24; border-radius: 5px; text-align: center;">
+                                    Something went wrong. Please try again later.
+                                </div>
+                            </div>
             </div>
         </div>
     </div>
@@ -559,7 +574,7 @@
                     <div class="content">
                         <p>Make a Quote</p>
                         <h3>
-                            <a href="mailto:RainbowLand@gmail.com">RainbowLand@gmail.com</a>
+                            <a href="mailto:rainbowland@gmail.com">rainbowland@gmail.com</a>
                         </h3>
                     </div>
                 </div>
