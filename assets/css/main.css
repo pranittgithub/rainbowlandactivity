@@ -2,7 +2,7 @@
 Theme Name: RainbowLand
 Author: Gramentheme
 Author URI: https://themeforest.net/user/gramentheme
-Description: RainbowLand - Kindergarten School HTML Template<
+Description: RainbowLand - KinderGarden School HTML Template<
 Version: 1.0.0
 */
 /*CSS Table Of Content Ends Here*/
@@ -1386,6 +1386,7 @@ span {
   .contact-wrapper .contact-content {
     margin-top: 60px;
     padding: 0 35px 60px;
+    
   }
 }
 @media (max-width: 991px) {
@@ -1393,6 +1394,7 @@ span {
     margin-top: 0;
     margin-left: 0;
     padding: 0;
+    
   }
 }
 @media (max-width: 991px) {
@@ -1423,6 +1425,26 @@ span {
 .contact-wrapper .contact-content .contact-form-items .theme-btn:hover {
   color: var(--white);
 }
+
+/* <style> */
+        .contact-content {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    
+        @media (min-width: 768px) {
+            .contact-content {
+                width: 50%;
+            }
+        }
+    
+        @media (min-width: 992px) {
+            .contact-content {
+                width: 40%;
+            }
+        }
+    /* </style> */
+    
 
 .contact-info-area {
   padding-top: 220px;
@@ -6578,6 +6600,7 @@ span {
 .search-wrap input.form-control:focus {
   background-color: var(--theme);
 }
+
 
 input.main-search-input::placeholder {
   color: var(--theme);
