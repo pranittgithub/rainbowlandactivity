@@ -1,10 +1,10 @@
 /*-----------------------------------------------------------------
 
-Template Name: RainbowLand - KinderGarden School HTML Template<
+Template Name: RainbowLand - Kindergarten School HTML Template<
 Author:  Gramentheme
 Author URI: https://themeforest.net/user/gramentheme/portfolio
 Version: 1.0.0
-Description: RainbowLand - KinderGarden School HTML Template<
+Description: RainbowLand - Kindergarten School HTML Template<
 
 -------------------------------------------------------------------
 CSS TABLE OF CONTENTS
