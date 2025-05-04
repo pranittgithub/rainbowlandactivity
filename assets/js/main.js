@@ -1,10 +1,10 @@
 /*-----------------------------------------------------------------
 
-Template Name: RainbowLand - Kindergarten School HTML Template<
+Template Name: RainbowLand - Pre School & Activity Center in Virar West  <
 Author:  Gramentheme
 Author URI: https://themeforest.net/user/gramentheme/portfolio
 Version: 1.0.0
-Description: RainbowLand - Kindergarten School HTML Template<
+Description: RainbowLand - Pre School & Activity Center in Virar West  <
 
 -------------------------------------------------------------------
 CSS TABLE OF CONTENTS
