@@ -6457,7 +6457,7 @@ span {
 }
 @media (max-width: 767px) {
   .preloader .animation-preloader .txt-loading {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
 }
 .preloader .animation-preloader .txt-loading .letters-loading {
