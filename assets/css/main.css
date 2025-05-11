@@ -157,7 +157,7 @@ Version: 1.0.0
     Template Default Fonts & Fonts Styles
  ---------------------------------------------- */
 body {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 28px;
@@ -3525,6 +3525,7 @@ span {
 }
 .header-main .main-menu ul li .submenu {
   position: absolute;
+  border-radius: 10px;
   top: 100%;
   inset-inline-start: 0;
   min-width: 240px;
@@ -3582,6 +3583,7 @@ span {
   transform: translateY(1);
   visibility: visible;
   opacity: 1;
+  
 }
 .header-main .main-menu ul li .submenu li.has-dropdown > a::after {
   position: absolute;
@@ -6860,11 +6862,11 @@ input.main-search-input::placeholder {
 }
 
 .program-box-items {
-  padding: 20px 30px 36px;
+  padding: 30px 10px 36px;
   position: relative;
   z-index: 9;
   text-align: center;
-  margin: 30px auto;
+  margin: 40px auto;
 }
 .program-box-items .program-bg {
   position: absolute;
@@ -7280,7 +7282,7 @@ input.main-search-input::placeholder {
   font-weight: "Quicksand", sans-serif;
 }
 .clases-items .clases-content .clases-schedule li span {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: var(--theme);
   font-weight: 14px;
 }
