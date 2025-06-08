@@ -374,7 +374,7 @@
     <section class="py-5" style="background-color: #f3f1ea;">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-4">
                     <h5 class="fw-bold">Important Dates in<br>Academic Year 2025 - 26</h5>
                 </div>
                 <div class="col-md-8">
@@ -383,7 +383,7 @@
                             <small class="fw-bold">Open House (Preschool)</small><br>
                             <span>12th of February 2025</span>
                         </div>
-                        <div class="col-6 col-md-4 mb-3">
+                        <div class="col-12 col-md-4 mb-3">
                             <small class="fw-bold">Last Date for Admissions Year 2025–26</small><br>
                             <span>April 20th, 2025</span>
                         </div>
@@ -398,47 +398,133 @@
     </section>
 
     <!-- Admission Steps Section -->
-    <!-- <section class="py-5 text-center">
-        <div class="container">
-            <div class="row justify-content-center">
-
-                <div class="col-12 col-md-4 mb-5">
-                    <div class="rounded-circle bg-info text-white mx-auto mb-3"
-                        style="width: 60px; height: 60px; line-height: 60px;">
-                        <strong>01</strong>
-                    </div>
-                    <h6 class="fw-bold text-danger">First step</h6>
-                    <p class="text-muted small">
-                        Visit Rainbow Land Preschool <br> in Virar during Open House.
-                    </p>
-                </div>
-
-                <div class="col-12 col-md-4 mb-5">
-                    <div class="rounded-circle bg-secondary text-white mx-auto mb-3"
-                        style="width: 60px; height: 60px; line-height: 60px;">
-                        <strong>02</strong>
-                    </div>
-                    <h6 class="fw-bold text-purple">Second step</h6>
-                    <p class="text-muted small">
-                        Submit an application along <br> with the admission fee.
-                    </p>
-                </div>
-
-                <div class="col-12 col-md-4 mb-5">
-                    <div class="rounded-circle bg-success text-white mx-auto mb-3"
-                        style="width: 60px; height: 60px; line-height: 60px;">
-                        <strong>03</strong>
-                    </div>
-                    <h6 class="fw-bold text-primary">Third step</h6>
-                    <p class="text-muted small">
-                        Schedule a meeting with the <br> Admissions Department and <br> confirm admission post fee
-                        payment.
-                    </p>
-                </div>
-
-            </div>
+    <section class="py-5" style="background-color: #f3f1ea;">
+       <section class="py-5" style="background-color: #f3f1ea;">
+    <div class="container">
+        <div style="margin-bottom: 40px;">
+            <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; position: relative; padding-bottom: 10px;">
+                Important Events
+                <span style="content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background-color: #f39f5f; display: block;"></span>
+            </h2>
         </div>
-    </section> -->
+        <div class="row" id="events-container">
+            <!-- Dynamic event cards will appear here -->
+        </div>
+    </div>
+</section>
+
+<script>
+    // Easy-to-extend event data
+    const events = [
+    { name: "Republic Day Celebration", date: "January 26, 2025" },
+    { name: "Holi Splash Party", date: "March 14, 2025" },
+    { name: "Summer Break", date: "April 20 - June 5, 2025" },
+    { name: "Environment Day Activity", date: "June 5, 2025" },
+    { name: "Rainy Day Fun Fair", date: "July 10, 2025" },
+    { name: "Independence Day Celebration", date: "August 15, 2025" },
+    { name: "Teacher’s Day Special", date: "September 5, 2025" },
+    { name: "Annual Sports Day", date: "October 3, 2025" },
+    { name: "Diwali Holidays", date: "October 20 - November 5, 2025" },
+    { name: "Children’s Day Celebration", date: "November 14, 2025" },
+    { name: "Christmas Carnival", date: "December 22, 2025" },
+    { name: "Winter Break", date: "December 25, 2025 - January 5, 2026" }
+    ];
+
+    function renderEventCards() {
+        const container = document.getElementById('events-container');
+        container.innerHTML = '';
+
+        events.forEach(event => {
+            const card = document.createElement('div');
+            card.className = 'col-lg-4 col-md-6';
+
+            card.innerHTML = `
+                <div class="event-card">
+                    <div class="event-header">
+                        <h5>${event.name}</h5>
+                        <div class="event-date">${event.date}</div>
+                    </div>
+                    <a href="gallery.html" class="event-btn">
+                        <i class="fas fa-images"></i> Gallery
+                    </a>
+                </div>
+            `;
+
+            container.appendChild(card);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', renderEventCards);
+</script>
+
+<style>
+    .event-card {
+        background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        border: 1px solid rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+
+    .event-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(253, 126, 20, 0.15);
+        border-color: rgba(253, 126, 20, 0.2);
+    }
+
+    .event-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        gap: 12px;
+    }
+
+    .event-header h5 {
+        color: #2c3e50;
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin: 0;
+        line-height: 1.3;
+        flex: 1;
+    }
+
+    .event-date {
+        background: linear-gradient(135deg, #fd7e14 0%, #e85d04 100%);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 8px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        white-space: nowrap;
+        box-shadow: 0 2px 4px rgba(253, 126, 20, 0.3);
+    }
+
+    .event-btn {
+        background: linear-gradient(135deg, #fd7e14 0%, #e85d04 100%);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 2px 8px rgba(253, 126, 20, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .event-btn:hover {
+        background: linear-gradient(135deg, #292727 0%, #3a1700 100%);
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(253, 126, 20, 0.4);
+    }
+</style>
+
+    </section>
 
 
     <section class="py-5 bg-light">
@@ -548,28 +634,7 @@
                     <p><strong>Email:</strong><br />
                         <span class="text-danger">admissions@rainbowlandactivity.com</span>
                     </p>
-                </div>                    <p>
-                        Admission to Rainbow Land Preschool has started for the academic year 2025–2026.
-                    </p><br>
-                    <p>
-                        While most families complete registration and admissions by the end of February, we offer
-                        admissions on a First come, first-serve basis.
-                    </p><br>
-                    <p>
-                        We have limited seats for the Academic year 2025 – 2026 and thus request parents to register
-                        before the end of February and confirm their admissions in advance.
-                    </p>
-                    <p>Admissions are confirmed post-payment of fees only.</p><br>
-                    <p><strong>Rainbow Land Activity Centre</strong></p>
-                    <p>
-                        3rd Floor, Dhimahi Community Centre, Near BAPS Swami Narayan Mandir, Virar West.
-                    </p><br>
-                    <p><strong>Phone:</strong><br />
-                        <span class="text-danger">+91 8097923389</span>
-                    </p>
-                    <p><strong>Email:</strong><br />
-                        <span class="text-danger">admissions@rainbowlandactivity.com</span>
-                    </p>
+                </div>                    
                 </div>
             </div>
         </div>
@@ -577,6 +642,7 @@
 
     <!--<< Footer Section Start >>-->
     <footer class="footer-section section-bg fix">
+        
         <div class="zebra-shape">
                 <img src="assets/img/about/zebra.png" style="height: auto; width: 80px;" alt="shape-img">
             </div>
