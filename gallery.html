@@ -323,262 +323,362 @@
             </div>
         </div>
     </div>
-
-    <div class="container my-5">
-        <h2 class="fw-bold text-center mb-4">Annual Function</h2>
-        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
+<!-- Carousel Section -->
+<div class="container my-5">
+    <h2 class="fw-bold text-center mb-4">Annual Function</h2>
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu1.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu2.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu3.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu4.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/02.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/04.png" class="d-block w-100 rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu5.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu6.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu7.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu8.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0">
+                <img id="modalImage" src="" class="w-100 rounded" alt="Zoomed Image">
+            </div>
         </div>
     </div>
-    <div class="container my-5">
-        <h2 class="fw-bold text-center mb-4">Activities</h2>
-        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
+</div>
+
+<!-- JS Script -->
+<script>
+    function showImage(src) {
+        document.getElementById("modalImage").src = src;
+    }
+</script>
+
+
+<!-- Carousel Section -->
+<div class="container my-5">
+    <h2 class="fw-bold text-center mb-4">Activities</h2>
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu1.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu2.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu3.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu4.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/02.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/04.png" class="d-block w-100 rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu5.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu6.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu7.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu8.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0">
+                <img id="modalImage" src="" class="w-100 rounded" alt="Zoomed Image">
+            </div>
         </div>
     </div>
-    <div class="container my-5">
-        <h2 class="fw-bold text-center mb-4">Pre School</h2>
-        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
+</div>
+
+<!-- JS Script -->
+<script>
+    function showImage(src) {
+        document.getElementById("modalImage").src = src;
+    }
+</script>
+
+
+
+
+<!-- Carousel Section -->
+<div class="container my-5">
+    <h2 class="fw-bold text-center mb-4">Pre School</h2>
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu1.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu2.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu3.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu4.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/02.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/04.png" class="d-block w-100 rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu5.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu6.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu7.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu8.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0">
+                <img id="modalImage" src="" class="w-100 rounded" alt="Zoomed Image">
+            </div>
         </div>
     </div>
-    <div class="container my-5">
-        <h2 class="fw-bold text-center mb-4">Summer Camp</h2>
-        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
+</div>
+
+<!-- JS Script -->
+<script>
+    function showImage(src) {
+        document.getElementById("modalImage").src = src;
+    }
+</script>
+
+
+<!-- Carousel Section -->
+<div class="container my-5">
+    <h2 class="fw-bold text-center mb-4">Summer camp</h2>
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu1.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu2.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu3.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu4.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/02.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/04.png" class="d-block w-100 rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu5.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu6.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu7.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu8.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0">
+                <img id="modalImage" src="" class="w-100 rounded" alt="Zoomed Image">
+            </div>
         </div>
     </div>
-    <div class="container my-5">
-        <h2 class="fw-bold text-center mb-4">Celebration</h2>
-        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
+</div>
+
+<!-- JS Script -->
+<script>
+    function showImage(src) {
+        document.getElementById("modalImage").src = src;
+    }
+</script>
+
+
+
+<!-- Carousel Section -->
+<div class="container my-5">
+    <h2 class="fw-bold text-center mb-4">Celebration</h2>
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu1.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu2.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu3.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu4.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/01.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <img src="assets/img/about/02.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/03.jpg" class="d-block w-100 rounded" alt="...">
-                        </div>
-                        <div class="col-6 col-md-3 d-none d-md-block">
-                            <img src="assets/img/about/04.png" class="d-block w-100 rounded" alt="...">
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu5.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="assets/img/main/anu6.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu7.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                    <div class="col-6 col-md-3 d-none d-md-block">
+                        <img src="assets/img/main/anu8.JPG" class="d-block w-100 rounded img-clickable" alt="..." data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0">
+                <img id="modalImage" src="" class="w-100 rounded" alt="Zoomed Image">
+            </div>
         </div>
     </div>
+</div>
+
+<!-- JS Script -->
+<script>
+    function showImage(src) {
+        document.getElementById("modalImage").src = src;
+    }
+</script>
 
     <section class="py-5 bg-light">
         <div class="container">
