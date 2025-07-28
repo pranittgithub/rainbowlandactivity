@@ -8614,3 +8614,10 @@ input.main-search-input::placeholder {
     .img-clickable {
         cursor: pointer;
     }
+
+.thumb img {
+    width: 100% !important;
+    height: 350px !important;
+    object-fit: cover;
+    display: block;
+}
